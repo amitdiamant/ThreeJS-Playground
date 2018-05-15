@@ -3,5 +3,5 @@ Basic Three.JS playground
 
 # Setup
 * Clone repository
-* `npm run install`
+* `npm install`
 * `npm run dev`
