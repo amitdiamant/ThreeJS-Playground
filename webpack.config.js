@@ -1,5 +1,5 @@
+const opn = require('opn');
 const HtmlwebpackPlugin = require('html-webpack-plugin');
-const OpenBrowserPlugin = require('open-browser-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -18,10 +18,9 @@ module.exports = {
     new HtmlwebpackPlugin({
       inject: 'body',
       template: './src/index.html'
-    }),
-    new OpenBrowserPlugin({
-      url: 'http://localhost:8080'
     })
   ],
   devtool: 'cheap-module-source-map'
 };
+
+opn(`http://localhost:8080`);
